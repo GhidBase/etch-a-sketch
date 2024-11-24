@@ -23,10 +23,13 @@ function initializeGridArray() {
 }
 
 function createGridElements() {
-    grid.forEach((row, index) => {
+    grid.forEach((row, rowIndex) => {
         let rowDiv = document.createElement("div");
-        rowDiv.textContent = index; // Use the index parameter
         etchASketchOutside.appendChild(rowDiv);
+        for (let i = 0; i < columns; i++) {
+            grid[row,i] = document.createElement("div");
+            rowDiv.appendChild(grid[row,i]);
+        }
     });
 }
 
