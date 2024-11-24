@@ -5,8 +5,13 @@ body {
 
 .etch-a-sketch-outside {
     display: flex;
+    flex-direction: column;
     flex: 1 1 auto;
     max-width: 800px;
     height: 800px;
     background-color: brown;
+}
+
+.etch-a-sketch-outside > div {
+    background-color: rgb(98, 98, 255);
 }
