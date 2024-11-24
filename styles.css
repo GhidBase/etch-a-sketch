@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.etch-a-sketch-outside {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 800px;
+    height: 800px;
+    background-color: brown;
+}
