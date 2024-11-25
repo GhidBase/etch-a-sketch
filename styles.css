@@ -4,6 +4,10 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-size: 80px;
+}
+
 .etch-a-sketch-outside {
     display: flex;
     flex-direction: column;
