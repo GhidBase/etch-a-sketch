@@ -26,7 +26,8 @@ function initializeGridArray() {
 }
 
 function mouseoverSquare(event) {
-    event.target.style.backgroundColor = 'green';
+    let color = getRandomColor();
+    event.target.style.backgroundColor = color;
 }
 
 function createGridElements() {
@@ -55,6 +56,14 @@ function askForGridSize() {
     initializeGridArray();
     createGridElements();
 };
+
+function getRandomColor() {
+    // Generate a random number between 0 and 0xFFFFFF (16777215 in decimal)
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
+    // Pad with leading zeros if needed and prepend a hash (#)
+    return `#${randomColor.padStart(6, '0')}`;
+}
 
 initializeGridArray();
 createGridElements();
