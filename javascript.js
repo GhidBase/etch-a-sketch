@@ -10,12 +10,15 @@
 
 
 const etchASketchOutside = document.querySelector(".etch-a-sketch-outside");
+const changeGridButton = document.querySelector("#change-grid-button");
+changeGridButton.addEventListener("click", askForGridSize)
 
 let rows = 16;
 let columns = 16;
-let grid = new Array(rows);
+let grid = "";
 
 function initializeGridArray() {
+    grid = new Array(rows);
     for (let i = 0; i < rows; i++)
         {
             grid[i] = new Array(columns);
@@ -43,6 +46,15 @@ function removeGridElements() {
         etchASketchOutside.removeChild(etchASketchOutside.firstChild);
     }
 }
+
+function askForGridSize() {
+    let newGrid = prompt("Choose a grid size (limited to 100x100)");
+    rows = newGrid;
+    columns = newGrid;
+    removeGridElements();
+    initializeGridArray();
+    createGridElements();
+};
 
 initializeGridArray();
 createGridElements();

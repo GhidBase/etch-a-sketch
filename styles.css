@@ -25,3 +25,12 @@ body {
     border: 1px solid black;
     flex: 1;
 }
+
+.button-container {
+    margin: 20px;
+    display: flex;
+}
+
+.button-container > button {
+    font-size: 40px;
+}
